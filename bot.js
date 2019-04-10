@@ -102,4 +102,13 @@ bot.on('guildMemberRemove', async member => {
   await channels.send(embed)
 })
 
+bot.on("guildMemberAdd", async => {
+	console.log(`${member.id} Присоединился к серверу.`);
+
+	let welcomechannel = member.guild.channels.find('name', "welcome_leave");
+	welcomechannel.send(`**УРА!** _К нашей пати присоединился_ ***${member}***!`)
+});
+
+
+
 bot.login(token);
