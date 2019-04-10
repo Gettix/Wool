@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
   //!pay @isatisfied 59345
 
   if(!coins[message.author.id]){
-    return message.reply("Недостаточно средств.")
+    return message.reply("Вы не можете отправить монетки себе.")
   }
 
   let pUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
   let pCoins = coins[pUser.id].coins;
   let sCoins = coins[message.author.id].coins;
 
-  if(sCoins < args[0]) return message.reply("Not enough coins there!");
+  if(sCoins < args[0]) return message.reply("Недостаточно монет.");
 
   coins[message.author.id] = {
     coins: sCoins - parseInt(args[1])
