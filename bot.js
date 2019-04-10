@@ -106,7 +106,7 @@ bot.on("guildMemberAdd", async => {
 	console.log(`${member.id} Присоединился к серверу.`);
 
 	let welcomechannel = member.guild.channels.find('name', "welcome_leave");
-	welcomechannel.send(`**УРА!** _К нашей пати присоединился_ ***${member}***!`)
+	welcomechannel.send(`УРА! К нашей пати присоединился ${member}!`)
 });
 
 
