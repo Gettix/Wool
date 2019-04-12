@@ -123,4 +123,4 @@ bot.on("message", async message => {
 
 
 
-bot.login(token);
+bot.login(BOT_TOKEN);
